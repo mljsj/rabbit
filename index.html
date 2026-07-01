@@ -1031,6 +1031,383 @@
             transform: scale(0.98);
         }
 
+        /* ========== 计划打卡页面 ========== */
+        .plan-container {
+            padding-bottom: 16px;
+        }
+
+        /* 周导航器 */
+        .week-navigator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .week-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        /* 周信息输入区 */
+        .week-info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(74,144,217,0.08);
+        }
+
+        .week-info-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+
+        .week-info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .week-info-label {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+            min-width: 72px;
+        }
+
+        .week-info-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .week-info-input:focus {
+            border-color: #4A90D9;
+        }
+
+        /* 习惯打卡网格 */
+        .habit-grid-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(74,144,217,0.08);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .habit-grid-card h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .habit-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .habit-table th {
+            padding: 6px 4px;
+            font-size: 11px;
+            color: #999;
+            font-weight: 500;
+            text-align: center;
+            border-bottom: 1px solid #F0F0F0;
+        }
+
+        .habit-table th:first-child {
+            text-align: left;
+            min-width: 72px;
+        }
+
+        .habit-table th.today-col {
+            color: #4A90D9;
+            font-weight: 700;
+        }
+
+        .habit-table td {
+            padding: 6px 4px;
+            text-align: center;
+            border-bottom: 1px solid #F5F5F5;
+            vertical-align: middle;
+        }
+
+        .habit-table td:first-child {
+            text-align: left;
+            font-size: 13px;
+            color: #333;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .habit-table td.today-col {
+            background: rgba(74,144,217,0.04);
+        }
+
+        .habit-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* 打卡按钮 */
+        .check-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #E0E0E0;
+            background: #F9F9F9;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: transparent;
+            transition: all 0.2s;
+        }
+
+        .check-btn.checked {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            border-color: #4CAF50;
+            color: white;
+            box-shadow: 0 2px 8px rgba(76,175,80,0.3);
+        }
+
+        .check-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* 详细备注 */
+        .plan-notes-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(74,144,217,0.08);
+        }
+
+        .plan-notes-card label {
+            font-size: 13px;
+            color: #666;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .plan-notes-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+            font-family: inherit;
+            resize: none;
+            height: 80px;
+        }
+
+        .plan-notes-textarea:focus {
+            border-color: #4A90D9;
+        }
+
+        /* 时长追踪 */
+        .time-track-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(74,144,217,0.08);
+        }
+
+        .time-track-card h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .time-track-day-select {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .time-day-btn {
+            padding: 6px 12px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            background: white;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #666;
+        }
+
+        .time-day-btn.active {
+            border-color: #4A90D9;
+            background: rgba(74,144,217,0.08);
+            color: #4A90D9;
+            font-weight: 600;
+        }
+
+        .time-day-btn:active {
+            transform: scale(0.95);
+        }
+
+        .time-track-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .time-track-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .time-track-label {
+            font-size: 12px;
+            color: #666;
+            min-width: 140px;
+            flex-shrink: 0;
+        }
+
+        .time-track-input {
+            width: 60px;
+            padding: 6px 8px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            text-align: center;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .time-track-input:focus {
+            border-color: #4A90D9;
+        }
+
+        .time-track-unit {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .time-total-row {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #F0F0F0;
+            font-size: 13px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .time-total-bar-bg {
+            flex: 1;
+            height: 8px;
+            background: #F0F0F0;
+            border-radius: 4px;
+            margin: 0 12px;
+            overflow: hidden;
+        }
+
+        .time-total-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(135deg, #4A90D9, #E88DB3);
+            transition: width 0.3s;
+        }
+
+        /* 周统计 */
+        .plan-stats-card {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(74,144,217,0.08);
+        }
+
+        .plan-stats-card h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .plan-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .plan-stat-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .plan-stat-name {
+            font-size: 12px;
+            color: #666;
+            min-width: 56px;
+            flex-shrink: 0;
+        }
+
+        .plan-stat-bar-bg {
+            flex: 1;
+            height: 6px;
+            background: #F0F0F0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .plan-stat-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(135deg, #4A90D9, #E88DB3);
+            transition: width 0.5s ease;
+        }
+
+        .plan-stat-pct {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            min-width: 36px;
+            text-align: right;
+        }
+
+        .plan-overall-rate {
+            text-align: center;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #F0F0F0;
+        }
+
+        .plan-overall-rate .rate-num {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4A90D9, #E88DB3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .plan-overall-rate .rate-label {
+            font-size: 12px;
+            color: #999;
+        }
+
         /* ========== 动画 ========== */
         @keyframes fadeInUp {
             from {
@@ -1245,6 +1622,105 @@
             </div>
         </div>
 
+        <!-- Tab4: 计划打卡 -->
+        <div class="tab-content" id="tabPlan">
+            <div class="plan-container">
+                <!-- 周导航器 -->
+                <div class="week-navigator">
+                    <button class="date-nav-btn" onclick="changeWeek(-1)">◀</button>
+                    <span class="week-label" id="weekLabelDisplay">加载中...</span>
+                    <button class="date-nav-btn" onclick="changeWeek(1)">▶</button>
+                </div>
+
+                <!-- 周信息输入区 -->
+                <div class="week-info-card">
+                    <div class="week-info-row">
+                        <span class="week-info-label">潜龙勿用</span>
+                        <input class="week-info-input" id="virtueHidden" placeholder="本周隐藏的德行..." oninput="savePlanData()">
+                    </div>
+                    <div class="week-info-row">
+                        <span class="week-info-label">德行</span>
+                        <input class="week-info-input" id="virtueName" placeholder="本周核心德行..." oninput="savePlanData()">
+                    </div>
+                    <div class="week-info-row">
+                        <span class="week-info-label">目标</span>
+                        <input class="week-info-input" id="weekGoal" placeholder="本周目标..." oninput="savePlanData()">
+                    </div>
+                    <div class="week-info-row">
+                        <span class="week-info-label">计划</span>
+                        <input class="week-info-input" id="weekPlan" placeholder="本周计划..." oninput="savePlanData()">
+                    </div>
+                </div>
+
+                <!-- 习惯打卡网格 -->
+                <div class="habit-grid-card">
+                    <h4>每日习惯打卡</h4>
+                    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+                        <table class="habit-table" id="habitTable">
+                            <thead id="habitTableHead"></thead>
+                            <tbody id="habitTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 详细备注 -->
+                <div class="plan-notes-card">
+                    <label>详细备注（200-500字）</label>
+                    <textarea class="plan-notes-textarea" id="planNotes" placeholder="本周总结与反思..." maxlength="500" oninput="savePlanData()"></textarea>
+                </div>
+
+                <!-- 时长追踪 -->
+                <div class="time-track-card">
+                    <h4>每日时长追踪</h4>
+                    <div class="time-track-day-select" id="timeDaySelect"></div>
+                    <div id="timeTrackRows">
+                        <div class="time-track-row">
+                            <span class="time-track-label">Power Query</span>
+                            <input class="time-track-input" type="number" step="0.5" min="0" id="timePowerQuery" oninput="savePlanData()">
+                            <span class="time-track-unit">小时</span>
+                        </div>
+                        <div class="time-track-row">
+                            <span class="time-track-label">墨墨背单词</span>
+                            <input class="time-track-input" type="number" step="0.5" min="0" id="timeVocabulary" oninput="savePlanData()">
+                            <span class="time-track-unit">小时</span>
+                        </div>
+                        <div class="time-track-row">
+                            <span class="time-track-label">微信聊天（朋友）</span>
+                            <input class="time-track-input" type="number" step="0.5" min="0" id="timeChat" oninput="savePlanData()">
+                            <span class="time-track-unit">小时</span>
+                        </div>
+                        <div class="time-track-row">
+                            <span class="time-track-label">写字绘画</span>
+                            <input class="time-track-input" type="number" step="0.5" min="0" id="timeDrawing" oninput="savePlanData()">
+                            <span class="time-track-unit">小时</span>
+                        </div>
+                        <div class="time-track-row">
+                            <span class="time-track-label">外出（面试）</span>
+                            <input class="time-track-input" type="number" step="0.5" min="0" id="timeGoingOut" oninput="savePlanData()">
+                            <span class="time-track-unit">小时</span>
+                        </div>
+                    </div>
+                    <div class="time-total-row">
+                        <span>合计</span>
+                        <div class="time-total-bar-bg">
+                            <div class="time-total-bar-fill" id="timeTotalBar" style="width:0%"></div>
+                        </div>
+                        <span id="timeTotalText">0/24h</span>
+                    </div>
+                </div>
+
+                <!-- 周统计 -->
+                <div class="plan-stats-card">
+                    <h4>本周完成率</h4>
+                    <div id="planStatsContent"></div>
+                    <div class="plan-overall-rate">
+                        <div class="rate-num" id="planOverallRate">0%</div>
+                        <div class="rate-label">总体完成率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Tab3: 月度统计 -->
         <div class="tab-content" id="tabStats">
             <div class="stats-container">
@@ -1309,6 +1785,10 @@
         <button class="tab-btn" onclick="switchTab(2)" id="tabBtn2">
             <span class="tab-icon">📊</span>
             <span>统计</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(3)" id="tabBtn3">
+            <span class="tab-icon">📋</span>
+            <span>计划</span>
         </button>
     </nav>
 
@@ -1497,6 +1977,9 @@ function initApp() {
 
     // 渲染统计
     renderStats();
+
+    // 初始化计划打卡
+    initPlanView();
 }
 
 function formatDate(date) {
@@ -1526,8 +2009,8 @@ function changeMonth(offset) {
 // ========== Tab切换 ==========
 function switchTab(index) {
     currentTab = index;
-    const tabs = ['tabBookkeeping', 'tabDrawing', 'tabStats'];
-    const btns = [0, 1, 2];
+    const tabs = ['tabBookkeeping', 'tabDrawing', 'tabPlan', 'tabStats'];
+    const btns = [0, 1, 2, 3];
 
     tabs.forEach((id, i) => {
         const el = document.getElementById(id);
@@ -1544,6 +2027,11 @@ function switchTab(index) {
     // 切到画板时调整画布大小
     if (index === 1) {
         setTimeout(resizeCanvas, 100);
+    }
+
+    // 切到计划页面时刷新数据
+    if (index === 2) {
+        renderPlanView();
     }
 }
 
@@ -2141,6 +2629,322 @@ document.addEventListener('keydown', function(e) {
         closeModal();
     }
 });
+
+// ========== 计划打卡模块 ==========
+const HABITS_KEY = 'jxt_habits';
+const DAY_NAMES = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+const HABITS = [
+    '节制', '锻炼', '条理', '决心', '勤勉',
+    '中庸', '整洁', '写作', '早睡', '阅读', '攻击性'
+];
+
+// 当前查看的周（周一的日期）
+let planCurrentWeekStart = null;
+// 时长追踪当前选中日期索引（0-6）
+let planTimeDayIndex = 0;
+
+// 获取ISO周编号（如 "2026-W27"）
+function getWeekNumber(date) {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+}
+
+function getWeekKey(date) {
+    const y = date.getFullYear();
+    const w = getWeekNumber(date);
+    return `${y}-W${String(w).padStart(2, '0')}`;
+}
+
+// 获取某一天所在周的周一日期
+function getWeekMonday(date) {
+    const d = new Date(date);
+    const day = d.getDay();
+    const diff = day === 0 ? -6 : 1 - day; // 周日视为-6天
+    d.setDate(d.getDate() + diff);
+    d.setHours(0, 0, 0, 0);
+    return d;
+}
+
+// 获取周的日期范围标签（如 "7.1-7.7"）
+function getWeekDateRange(mondayDate) {
+    const start = new Date(mondayDate);
+    const end = new Date(mondayDate);
+    end.setDate(end.getDate() + 6);
+    return `${start.getMonth() + 1}.${start.getDate()}-${end.getMonth() + 1}.${end.getDate()}`;
+}
+
+// 获取周的每一天日期字符串数组
+function getWeekDates(mondayDate) {
+    const dates = [];
+    for (let i = 0; i < 7; i++) {
+        const d = new Date(mondayDate);
+        d.setDate(d.getDate() + i);
+        dates.push(formatDate(d));
+    }
+    return dates;
+}
+
+// 读取所有习惯数据
+function getAllHabitsData() {
+    try {
+        const data = localStorage.getItem(HABITS_KEY);
+        return data ? JSON.parse(data) : {};
+    } catch(e) {
+        return {};
+    }
+}
+
+// 保存所有习惯数据
+function saveAllHabitsData(data) {
+    try {
+        localStorage.setItem(HABITS_KEY, JSON.stringify(data));
+    } catch(e) {
+        showToast('习惯数据保存失败');
+    }
+}
+
+// 初始化计划页面
+function initPlanView() {
+    // 设置当前周为今天所在周
+    planCurrentWeekStart = getWeekMonday(new Date());
+    renderPlanView();
+}
+
+// 渲染计划页面
+function renderPlanView() {
+    if (!planCurrentWeekStart) return;
+
+    const weekKey = getWeekKey(planCurrentWeekStart);
+    const dates = getWeekDates(planCurrentWeekStart);
+    const today = formatDate(new Date());
+
+    // 更新周标签
+    document.getElementById('weekLabelDisplay').textContent = getWeekDateRange(planCurrentWeekStart);
+
+    // 读取该周数据
+    const allData = getAllHabitsData();
+    const weekData = allData[weekKey] || createEmptyWeekData(weekKey);
+
+    // 填充周信息
+    const virtues = weekData.virtues || {};
+    document.getElementById('virtueHidden').value = virtues['潜龙勿用'] || '';
+    document.getElementById('virtueName').value = virtues['德行'] || '';
+    document.getElementById('weekGoal').value = virtues['目标'] || '';
+    document.getElementById('weekPlan').value = virtues['计划'] || '';
+    document.getElementById('planNotes').value = weekData.notes || '';
+
+    // 渲染习惯打卡表格
+    renderHabitTable(weekData, dates, today);
+
+    // 渲染时长追踪日期选择
+    renderTimeDaySelect(dates, today);
+
+    // 加载时长数据
+    loadTimeTrackingData(weekData);
+
+    // 渲染统计
+    renderPlanStats(weekData);
+}
+
+// 创建空周数据
+function createEmptyWeekData(weekKey) {
+    return {
+        weekLabel: '',
+        virtues: { '潜龙勿用': '', '德行': '', '目标': '', '计划': '' },
+        checks: {},
+        notes: '',
+        timeTracking: {}
+    };
+}
+
+// 渲染习惯打卡表格
+function renderHabitTable(weekData, dates, today) {
+    const checks = weekData.checks || {};
+
+    // 渲染表头
+    let headHtml = '<tr><th>习惯</th>';
+    dates.forEach((dateStr, i) => {
+        const isToday = dateStr === today;
+        headHtml += `<th class="${isToday ? 'today-col' : ''}">${DAY_NAMES[i]}<br><span style="font-size:9px">${dateStr.slice(5)}</span></th>`;
+    });
+    headHtml += '</tr>';
+    document.getElementById('habitTableHead').innerHTML = headHtml;
+
+    // 渲染表体
+    let bodyHtml = '';
+    HABITS.forEach(habit => {
+        const habitChecks = checks[habit] || [false, false, false, false, false, false, false];
+        bodyHtml += '<tr>';
+        bodyHtml += `<td>${habit}</td>`;
+        habitChecks.forEach((checked, dayIdx) => {
+            const isToday = dates[dayIdx] === today;
+            bodyHtml += `<td class="${isToday ? 'today-col' : ''}">`;
+            bodyHtml += `<button class="check-btn ${checked ? 'checked' : ''}" onclick="toggleHabit('${habit}', ${dayIdx})">${checked ? '✓' : ''}</button>`;
+            bodyHtml += '</td>';
+        });
+        bodyHtml += '</tr>';
+    });
+    document.getElementById('habitTableBody').innerHTML = bodyHtml;
+}
+
+// 切换习惯打卡
+function toggleHabit(habit, dayIdx) {
+    const weekKey = getWeekKey(planCurrentWeekStart);
+    const allData = getAllHabitsData();
+    const weekData = allData[weekKey] || createEmptyWeekData(weekKey);
+
+    if (!weekData.checks[habit]) {
+        weekData.checks[habit] = [false, false, false, false, false, false, false];
+    }
+
+    weekData.checks[habit][dayIdx] = !weekData.checks[habit][dayIdx];
+    allData[weekKey] = weekData;
+    saveAllHabitsData(allData);
+
+    // 刷新视图
+    const dates = getWeekDates(planCurrentWeekStart);
+    const today = formatDate(new Date());
+    renderHabitTable(weekData, dates, today);
+    renderPlanStats(weekData);
+}
+
+// 渲染时长追踪日期选择按钮
+function renderTimeDaySelect(dates, today) {
+    const container = document.getElementById('timeDaySelect');
+    // 默认选中今天（如果在当前周内），否则选第一个
+    const todayIdx = dates.indexOf(today);
+    planTimeDayIndex = todayIdx >= 0 ? todayIdx : 0;
+
+    let html = '';
+    dates.forEach((dateStr, i) => {
+        const isActive = i === planTimeDayIndex;
+        const isToday = dateStr === today;
+        html += `<button class="time-day-btn ${isActive ? 'active' : ''}" onclick="selectTimeDay(${i})">${DAY_NAMES[i]}${isToday ? '(今天)' : ''}</button>`;
+    });
+    container.innerHTML = html;
+}
+
+// 选择时长追踪日期
+function selectTimeDay(idx) {
+    planTimeDayIndex = idx;
+    const dates = getWeekDates(planCurrentWeekStart);
+    const today = formatDate(new Date());
+    renderTimeDaySelect(dates, today);
+
+    const weekKey = getWeekKey(planCurrentWeekStart);
+    const allData = getAllHabitsData();
+    const weekData = allData[weekKey] || createEmptyWeekData(weekKey);
+    loadTimeTrackingData(weekData);
+}
+
+// 加载时长追踪数据
+function loadTimeTrackingData(weekData) {
+    const dates = getWeekDates(planCurrentWeekStart);
+    const dateStr = dates[planTimeDayIndex];
+    const timeData = (weekData.timeTracking || {})[dateStr] || {};
+
+    document.getElementById('timePowerQuery').value = timeData.powerQuery || 0;
+    document.getElementById('timeVocabulary').value = timeData.vocabulary || 0;
+    document.getElementById('timeChat').value = timeData.chat || 0;
+    document.getElementById('timeDrawing').value = timeData.drawing || 0;
+    document.getElementById('timeGoingOut').value = timeData.goingOut || 0;
+
+    updateTimeTotal();
+}
+
+// 更新时长合计
+function updateTimeTotal() {
+    const vals = [
+        parseFloat(document.getElementById('timePowerQuery').value) || 0,
+        parseFloat(document.getElementById('timeVocabulary').value) || 0,
+        parseFloat(document.getElementById('timeChat').value) || 0,
+        parseFloat(document.getElementById('timeDrawing').value) || 0,
+        parseFloat(document.getElementById('timeGoingOut').value) || 0
+    ];
+    const total = vals.reduce((a, b) => a + b, 0);
+    const pct = Math.min((total / 24) * 100, 100);
+    document.getElementById('timeTotalBar').style.width = pct + '%';
+    document.getElementById('timeTotalText').textContent = `${total}/24h`;
+}
+
+// 保存计划数据（输入变化时自动保存）
+function savePlanData() {
+    const weekKey = getWeekKey(planCurrentWeekStart);
+    const allData = getAllHabitsData();
+    const weekData = allData[weekKey] || createEmptyWeekData(weekKey);
+
+    // 保存周信息
+    weekData.virtues = {
+        '潜龙勿用': document.getElementById('virtueHidden').value.trim(),
+        '德行': document.getElementById('virtueName').value.trim(),
+        '目标': document.getElementById('weekGoal').value.trim(),
+        '计划': document.getElementById('weekPlan').value.trim()
+    };
+
+    // 保存备注
+    weekData.notes = document.getElementById('planNotes').value.trim();
+
+    // 保存时长追踪
+    const dates = getWeekDates(planCurrentWeekStart);
+    const dateStr = dates[planTimeDayIndex];
+    if (!weekData.timeTracking) weekData.timeTracking = {};
+    weekData.timeTracking[dateStr] = {
+        powerQuery: parseFloat(document.getElementById('timePowerQuery').value) || 0,
+        vocabulary: parseFloat(document.getElementById('timeVocabulary').value) || 0,
+        chat: parseFloat(document.getElementById('timeChat').value) || 0,
+        drawing: parseFloat(document.getElementById('timeDrawing').value) || 0,
+        goingOut: parseFloat(document.getElementById('timeGoingOut').value) || 0
+    };
+
+    allData[weekKey] = weekData;
+    saveAllHabitsData(allData);
+
+    // 更新时长合计
+    updateTimeTotal();
+}
+
+// 切换周（前进/后退）
+function changeWeek(offset) {
+    const newStart = new Date(planCurrentWeekStart);
+    newStart.setDate(newStart.getDate() + offset * 7);
+    planCurrentWeekStart = newStart;
+    renderPlanView();
+}
+
+// 渲染周统计
+function renderPlanStats(weekData) {
+    const checks = weekData.checks || {};
+    const container = document.getElementById('planStatsContent');
+
+    let totalChecked = 0;
+    let totalPossible = HABITS.length * 7;
+
+    let html = '';
+    HABITS.forEach(habit => {
+        const habitChecks = checks[habit] || [false, false, false, false, false, false, false];
+        const checked = habitChecks.filter(Boolean).length;
+        const pct = Math.round((checked / 7) * 100);
+        totalChecked += checked;
+
+        html += `
+            <div class="plan-stat-item">
+                <span class="plan-stat-name">${habit}</span>
+                <div class="plan-stat-bar-bg">
+                    <div class="plan-stat-bar-fill" style="width:${pct}%"></div>
+                </div>
+                <span class="plan-stat-pct">${pct}%</span>
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+
+    // 总体完成率
+    const overallPct = totalPossible > 0 ? Math.round((totalChecked / totalPossible) * 100) : 0;
+    document.getElementById('planOverallRate').textContent = overallPct + '%';
+}
 </script>
 
 </body>
